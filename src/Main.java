@@ -1,17 +1,45 @@
+import java.util.Scanner;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        StudentDetails student = new StudentDetails();
+        Scanner scanner = new Scanner(System.in);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        System.out.println("Hello there, what's your name? \n");
+        String name = scanner.nextLine();
+        student.setFullName(name);
+
+        System.out.println("It's me again, what's your department \n");
+        String department = scanner.nextLine();
+        student.setDepartment(department);
+
+        System.out.println("Hiii, How old are you? \n");
+        int age = scanner.nextInt();
+        student.setAge(age);
+
+        System.out.println("Hellooo, what level are you? \n");
+        int level = scanner.nextInt();
+        student.setLevel(level);
+
+        System.out.println("Sorry again, what's your weight? \n");
+        int weight = scanner.nextInt();
+        student.setWeight(weight);
+
+
+
+
+        System.out.println("Your name is " +student.getFullName());
+        System.out.println("Your department is " +student.getDepartment());
+        System.out.println("You're " +student.getAge() +"years old");
+        System.out.println("You're in " +student.getLevel() + "level");
+        System.out.println("You're " +student.getWeight() +"KG in weight");
+
+
+
+
         }
-    }
+
 }
